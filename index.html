@@ -1,280 +1,254 @@
 <!DOCTYPE html>
 <html lang="es" class="scroll-smooth">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Zaqueo Gómez Gómez | Emprendedor Tecnológico</title>
-<meta name="description" content="Portafolio profesional de Zaqueo Gómez Gómez. Fundador de IXTANET. Especialista en redes, MikroTik, ISP, automatización y desarrollo tecnológico en Guatemala.">
-<meta name="keywords" content="Zaqueo Gómez, IXTANET, MikroTik, ISP Guatemala, Redes, Telecomunicaciones, Python, Internet San Mateo Ixtatán">
+    <title>Zaqueo Gómez Gómez | Emprendedor & Tecnólogo</title>
+    <meta name="description" content="Portafolio de Zaqueo Gómez Gómez. Fundador de IXTANET y Purificadora Ixtatán. Especialista en redes, MikroTik y soluciones integrales en Guatemala.">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-<script src="https://cdn.tailwindcss.com"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #0f172a; }
 
-<style>
-body { font-family: 'Inter', sans-serif; background-color:#0f172a; }
+        .glass {
+            background: rgba(30, 41, 59, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
 
-.glass {
-background: rgba(30,41,59,0.7);
-backdrop-filter: blur(12px);
-border: 1px solid rgba(255,255,255,0.08);
-}
+        #network-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.4;
+        }
 
-.text-gradient {
-background: linear-gradient(to right, #38bdf8, #3b82f6);
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
-}
-
-#network-canvas {
-position: fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-z-index:-1;
-opacity:0.35;
-}
-
-.card-hover:hover {
-transform: translateY(-8px);
-transition:0.3s ease;
-box-shadow:0 20px 25px rgba(0,0,0,0.4);
-}
-</style>
+        .card-hover:hover {
+            transform: translateY(-8px);
+            transition: 0.3s ease;
+            border-color: #3b82f6;
+            box-shadow: 0 20px 25px rgba(0, 0, 0, 0.4);
+        }
+        
+        .section-title {
+            background: linear-gradient(to right, #60a5fa, #3b82f6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
 </head>
 
 <body class="text-slate-200">
 
-<canvas id="network-canvas"></canvas>
+    <canvas id="network-canvas"></canvas>
 
-<!-- NAV -->
-<nav class="fixed w-full z-50 py-4 bg-transparent transition-all duration-300" id="navbar">
-<div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
-<a href="#" class="text-2xl font-bold">ZG<span class="text-blue-500">.</span></a>
-<div class="hidden md:flex space-x-8 text-sm uppercase tracking-widest">
-<a href="#inicio" class="hover:text-blue-400">Inicio</a>
-<a href="#sobre-mi" class="hover:text-blue-400">Sobre Mí</a>
-<a href="#proyectos" class="hover:text-blue-400">Proyectos</a>
-<a href="#servicios" class="hover:text-blue-400">Servicios</a>
-<a href="#contacto" class="bg-blue-600 px-5 py-2 rounded-full hover:bg-blue-700">Contacto</a>
-</div>
-</div>
-</nav>
+    <nav class="fixed w-full z-50 py-4 bg-slate-900/80 backdrop-blur-md border-b border-white/5" id="navbar">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <a href="#" class="text-2xl font-extrabold tracking-tighter">ZG<span class="text-blue-500">.</span></a>
+            <div class="hidden md:flex space-x-8 text-sm font-semibold uppercase tracking-widest">
+                <a href="#inicio" class="hover:text-blue-400 transition">Inicio</a>
+                <a href="#sobre-mi" class="hover:text-blue-400 transition">Sobre Mí</a>
+                <a href="#proyectos" class="hover:text-blue-400 transition">Proyectos</a>
+                <a href="#contacto" class="bg-blue-600 px-6 py-2 rounded-full hover:bg-blue-700 transition">Contacto</a>
+            </div>
+        </div>
+    </nav>
 
-<!-- HERO -->
-<header id="inicio" class="min-h-screen flex items-center justify-center text-center px-6 pt-24">
-<div>
-<img src="https://github.com/zaqueo.png"
-class="w-44 h-44 rounded-full mx-auto border-4 border-blue-500 shadow-lg object-cover mb-8">
+    <header id="inicio" class="min-h-screen flex items-center justify-center text-center px-6 pt-24">
+        <div class="max-w-4xl">
+            <img src="https://github.com/zaqueo.png" 
+                 class="w-44 h-44 rounded-full mx-auto border-4 border-blue-500 shadow-[0_0_30px_rgba(59,130,246,0.5)] object-cover mb-8">
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-6">Zaqueo Gómez Gómez</h1>
+            <p class="text-xl md:text-2xl text-blue-400 mb-10 font-light">
+                Emprendedor Multifacético | Especialista en Redes | Fundador de IXTANET
+            </p>
+            <div class="flex justify-center gap-4">
+                <a href="#contacto" class="bg-blue-600 px-8 py-4 rounded-xl font-bold hover:bg-blue-700 transition transform hover:scale-105">
+                    Hablemos
+                </a>
+                <a href="#proyectos" class="glass px-8 py-4 rounded-xl font-bold hover:bg-white/10 transition">
+                    Ver Negocios
+                </a>
+            </div>
+        </div>
+    </header>
 
-<h1 class="text-5xl md:text-7xl font-extrabold mb-4">
-Zaqueo Gómez Gómez
-</h1>
+    <section id="sobre-mi" class="py-24 px-6">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-blue-500 uppercase tracking-widest text-sm font-bold mb-4">Sobre Mí</h2>
+                <h3 class="text-4xl md:text-5xl font-bold mb-8 section-title">Innovación y Servicios Esenciales</h3>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center text-lg text-slate-400 leading-relaxed">
+                <div class="space-y-6">
+                    <p>
+                        Soy un emprendedor enfocado en el desarrollo de San Mateo Ixtatán, Guatemala. A través de mi proyecto <strong class="text-white">IXTANET</strong>, lidero la expansión de internet y televisión digital, optimizando infraestructuras con tecnología <strong class="text-white">MikroTik y Ubiquiti</strong>.
+                    </p>
+                    <p>
+                        Mi compromiso con la comunidad se extiende a través de <strong class="text-white font-bold italic">Purificadora Ixtatán</strong>, donde gestiono la producción y distribución de agua purificada de alta calidad en bolsas y garrafones, además de la comercialización autorizada de gas propano.
+                    </p>
+                </div>
+                <div class="glass p-8 rounded-3xl border-l-4 border-blue-500">
+                    <h4 class="text-white font-bold mb-4 text-xl"><i class="fas fa-check-circle text-blue-500 mr-2"></i> Mis Pilares:</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><strong class="text-blue-400">Networking:</strong> Gestión avanzada de ISP y enlaces inalámbricos.</li>
+                        <li><strong class="text-blue-400">Automatización:</strong> Desarrollo en Python para control de clientes y tráfico.</li>
+                        <li><strong class="text-blue-400">Emprendimiento:</strong> Gestión operativa y comercial de servicios básicos.</li>
+                        <li><strong class="text-blue-400">Soporte:</strong> Soluciones en hardware, cámaras IP y sistemas operativos.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<p class="text-xl md:text-2xl text-blue-400 mb-8">
-Fundador de IXTANET | Especialista en Redes & MikroTik | Desarrollo Digital
-</p>
+    <section id="proyectos" class="py-24 px-6 bg-slate-900/50">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-blue-500 uppercase tracking-widest text-sm mb-4">Portafolio de Negocios</h2>
+                <h3 class="text-4xl font-bold">Mis Emprendimientos</h3>
+            </div>
 
-<a href="#contacto" class="bg-blue-600 px-8 py-4 rounded-xl font-bold hover:bg-blue-700 transition">
-Contactar Ahora
-</a>
-</div>
-</header>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="glass p-8 rounded-3xl card-hover">
+                    <div class="w-14 h-14 bg-blue-600/20 rounded-2xl flex items-center justify-center text-blue-500 mb-6">
+                        <i class="fas fa-wifi text-2xl"></i>
+                    </div>
+                    <h4 class="text-2xl font-bold mb-4">IXTANET - ISP</h4>
+                    <p class="text-slate-400 text-sm mb-4">Lidero la conectividad local con servicios de fibra óptica, enlaces inalámbricos y televisión digital de alta calidad.</p>
+                    <span class="text-xs bg-blue-900 text-blue-200 px-3 py-1 rounded-full">Tecnología & Redes</span>
+                </div>
 
-<!-- SOBRE MI -->
-<section id="sobre-mi" class="py-24 px-6">
-<div class="max-w-5xl mx-auto text-center">
-<h2 class="text-blue-500 uppercase tracking-widest text-sm mb-4">Sobre Mí</h2>
-<h3 class="text-4xl font-bold mb-10">Impulsando conectividad y tecnología en Guatemala</h3>
+                <div class="glass p-8 rounded-3xl card-hover border-blue-500/30">
+                    <div class="w-14 h-14 bg-cyan-600/20 rounded-2xl flex items-center justify-center text-cyan-400 mb-6">
+                        <i class="fas fa-faucet-drip text-2xl"></i>
+                    </div>
+                    <h4 class="text-2xl font-bold mb-4">Purificadora Ixtatán</h4>
+                    <p class="text-slate-400 text-sm mb-4">Producción de agua purificada certificada. Distribución eficiente de garrafones, bolsas de agua y cilindros de gas propano.</p>
+                    <span class="text-xs bg-cyan-900 text-cyan-200 px-3 py-1 rounded-full">Servicios Esenciales</span>
+                </div>
 
-<div class="space-y-6 text-lg text-slate-400 leading-relaxed">
-<p>
-Soy emprendedor tecnológico y fundador de <strong class="text-white">IXTANET</strong>, un proyecto enfocado en brindar
-servicio de Internet y Televisión Digital en mi región.
-</p>
+                <div class="glass p-8 rounded-3xl card-hover">
+                    <div class="w-14 h-14 bg-indigo-600/20 rounded-2xl flex items-center justify-center text-indigo-400 mb-6">
+                        <i class="fab fa-python text-2xl"></i>
+                    </div>
+                    <h4 class="text-2xl font-bold mb-4">Automatización</h4>
+                    <p class="text-slate-400 text-sm mb-4">Creación de Web Apps con Python/Flask para la gestión automatizada de MikroTik: cortes, pagos y monitoreo.</p>
+                    <span class="text-xs bg-indigo-900 text-indigo-200 px-3 py-1 rounded-full">Software</span>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<p>
-Me especializo en <strong class="text-white">infraestructura de redes, MikroTik, gestión de ISP, enlaces inalámbricos y automatización</strong>,
-diseñando soluciones robustas para hogares y empresas.
-</p>
+    <section id="contacto" class="py-24 px-6">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-blue-500 uppercase tracking-widest text-sm mb-4">Conectemos</h2>
+            <h3 class="text-4xl font-bold mb-12">¿Tienes alguna consulta o proyecto?</h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <a href="mailto:tu-correo@gmail.com" class="glass p-8 rounded-3xl hover:border-blue-500 transition-all group">
+                    <i class="fas fa-envelope text-3xl mb-4 group-hover:scale-110 transition"></i>
+                    <p class="font-bold">Email</p>
+                </a>
+                <a href="https://wa.me/50278810881" target="_blank" class="glass p-8 rounded-3xl hover:border-green-500 transition-all group">
+                    <i class="fab fa-whatsapp text-3xl mb-4 text-green-500 group-hover:scale-110 transition"></i>
+                    <p class="font-bold">WhatsApp</p>
+                </a>
+                <a href="https://github.com/zaqueo" target="_blank" class="glass p-8 rounded-3xl hover:border-white transition-all group">
+                    <i class="fab fa-github text-3xl mb-4 group-hover:scale-110 transition"></i>
+                    <p class="font-bold">GitHub</p>
+                </a>
+            </div>
+        </div>
+    </section>
 
-<p>
-También desarrollo herramientas en <strong class="text-white">Python</strong> para monitoreo de red,
-gestión de clientes y optimización de tráfico.
-</p>
+    <footer class="py-12 text-center border-t border-white/5 bg-slate-900">
+        <p class="text-slate-500 text-sm font-medium">© 2026 Zaqueo Gómez Gómez — San Mateo Ixtatán, Huehuetenango</p>
+    </footer>
 
-<p>
-Mi visión es llevar conectividad estable, innovación y crecimiento digital
-a más comunidades en Guatemala.
-</p>
-</div>
-</div>
-</section>
+    <script>
+        const canvas = document.getElementById('network-canvas');
+        const ctx = canvas.getContext('2d');
+        let particles = [];
+        const maxDist = 150; // Distancia para conectar puntos
 
-<!-- PROYECTOS -->
-<section id="proyectos" class="py-24 px-6 bg-slate-900/50">
-<div class="max-w-6xl mx-auto">
-<div class="text-center mb-16">
-<h2 class="text-blue-500 uppercase tracking-widest text-sm mb-4">Portafolio</h2>
-<h3 class="text-4xl font-bold">Proyectos Activos</h3>
-</div>
+        function resize() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+        window.addEventListener('resize', resize);
+        resize();
 
-<div class="grid md:grid-cols-2 gap-8">
+        class Particle {
+            constructor() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.vx = (Math.random() - 0.5) * 0.6;
+                this.vy = (Math.random() - 0.5) * 0.6;
+                this.size = 2;
+            }
+            update() {
+                this.x += this.vx;
+                this.y += this.vy;
+                if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
+                if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
+            }
+            draw() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fillStyle = "#3b82f6";
+                ctx.fill();
+            }
+        }
 
-<div class="glass p-8 rounded-3xl card-hover">
-<i class="fas fa-broadcast-tower text-3xl text-blue-500 mb-6"></i>
-<h4 class="text-2xl font-bold mb-4">IXTANET - ISP Local</h4>
-<p class="text-slate-400">
-Implementación y expansión de red de internet y televisión digital,
-infraestructura, soporte técnico y gestión de clientes.
-</p>
-</div>
+        // Crear partículas
+        for (let i = 0; i < 90; i++) {
+            particles.push(new Particle());
+        }
 
-<div class="glass p-8 rounded-3xl card-hover">
-<i class="fas fa-network-wired text-3xl text-indigo-400 mb-6"></i>
-<h4 class="text-2xl font-bold mb-4">Automatización MikroTik</h4>
-<p class="text-slate-400">
-Scripts avanzados para control de ancho de banda,
-PPPoE, suspensión automática y seguridad perimetral.
-</p>
-</div>
+        function animate() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            
+            for (let i = 0; i < particles.length; i++) {
+                particles[i].update();
+                particles[i].draw();
 
-<div class="glass p-8 rounded-3xl card-hover">
-<i class="fab fa-python text-3xl text-yellow-400 mb-6"></i>
-<h4 class="text-2xl font-bold mb-4">Sistemas en Python</h4>
-<p class="text-slate-400">
-Dashboards de monitoreo en tiempo real,
-control de nodos y administración técnica.
-</p>
-</div>
+                // Lógica de conexión (Líneas entre puntos cercanos)
+                for (let j = i + 1; j < particles.length; j++) {
+                    const dx = particles[i].x - particles[j].x;
+                    const dy = particles[i].y - particles[j].y;
+                    const distance = Math.sqrt(dx * dx + dy * dy);
 
-<div class="glass p-8 rounded-3xl card-hover">
-<i class="fas fa-laptop text-3xl text-cyan-400 mb-6"></i>
-<h4 class="text-2xl font-bold mb-4">Venta de Tecnología</h4>
-<p class="text-slate-400">
-Comercialización de computadoras, cámaras IP,
-impresoras y equipos integrados a soluciones de conectividad.
-</p>
-</div>
+                    if (distance < maxDist) {
+                        ctx.beginPath();
+                        ctx.strokeStyle = `rgba(59, 130, 246, ${1 - distance / maxDist})`;
+                        ctx.lineWidth = 0.6;
+                        ctx.moveTo(particles[i].x, particles[i].y);
+                        ctx.lineTo(particles[j].x, particles[j].y);
+                        ctx.stroke();
+                    }
+                }
+            }
+            requestAnimationFrame(animate);
+        }
+        animate();
 
-</div>
-</div>
-</section>
-
-<!-- SERVICIOS -->
-<section id="servicios" class="py-24 px-6">
-<div class="max-w-6xl mx-auto text-center">
-<h2 class="text-blue-500 uppercase tracking-widest text-sm mb-4">Servicios</h2>
-<h3 class="text-4xl font-bold mb-16">Soluciones Tecnológicas</h3>
-
-<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-
-<div class="p-8 border border-slate-800 rounded-3xl hover:bg-slate-800/50 transition">
-<i class="fas fa-wifi text-3xl mb-6 text-blue-400"></i>
-<h4 class="font-bold mb-3">Infraestructura ISP</h4>
-<p class="text-sm text-slate-400">Torres, enlaces inalámbricos y cobertura WiFi profesional.</p>
-</div>
-
-<div class="p-8 border border-slate-800 rounded-3xl hover:bg-slate-800/50 transition">
-<i class="fas fa-server text-3xl mb-6 text-indigo-400"></i>
-<h4 class="font-bold mb-3">Configuración MikroTik</h4>
-<p class="text-sm text-slate-400">QoS, Hotspot, PPPoE y seguridad avanzada.</p>
-</div>
-
-<div class="p-8 border border-slate-800 rounded-3xl hover:bg-slate-800/50 transition">
-<i class="fas fa-video text-3xl mb-6 text-cyan-400"></i>
-<h4 class="font-bold mb-3">Cámaras IP</h4>
-<p class="text-sm text-slate-400">Vigilancia con acceso remoto seguro.</p>
-</div>
-
-<div class="p-8 border border-slate-800 rounded-3xl hover:bg-slate-800/50 transition">
-<i class="fas fa-headset text-3xl mb-6 text-green-400"></i>
-<h4 class="font-bold mb-3">Soporte Técnico</h4>
-<p class="text-sm text-slate-400">Atención técnica especializada para hogares y empresas.</p>
-</div>
-
-</div>
-</div>
-</section>
-
-<!-- CONTACTO -->
-<section id="contacto" class="py-24 px-6 bg-slate-900/40">
-<div class="max-w-4xl mx-auto text-center">
-<h2 class="text-blue-500 uppercase tracking-widest text-sm mb-4">Contacto</h2>
-<h3 class="text-4xl font-bold mb-12">Hablemos de tu próximo proyecto</h3>
-
-<div class="grid md:grid-cols-3 gap-8">
-
-<a href="mailto:tu-correo@gmail.com" class="glass p-8 rounded-3xl hover:border-blue-500">
-<i class="fas fa-envelope text-3xl mb-4"></i>
-<p>Email</p>
-</a>
-
-<a href="https://wa.me/50278810881" target="_blank" class="glass p-8 rounded-3xl hover:border-green-500">
-<i class="fab fa-whatsapp text-3xl mb-4 text-green-500"></i>
-<p>WhatsApp</p>
-</a>
-
-<a href="https://github.com/zaqueo" target="_blank" class="glass p-8 rounded-3xl hover:border-white">
-<i class="fab fa-github text-3xl mb-4"></i>
-<p>GitHub</p>
-</a>
-
-</div>
-</div>
-</section>
-
-<footer class="py-10 text-center border-t border-slate-800">
-<p class="text-slate-500 text-sm">© 2026 Zaqueo Gómez Gómez - Guatemala</p>
-</footer>
-
-<script>
-const canvas = document.getElementById('network-canvas');
-const ctx = canvas.getContext('2d');
-let particles = [];
-
-function resize(){
-canvas.width=window.innerWidth;
-canvas.height=window.innerHeight;
-}
-resize();
-window.addEventListener('resize',resize);
-
-class Particle{
-constructor(){
-this.x=Math.random()*canvas.width;
-this.y=Math.random()*canvas.height;
-this.vx=(Math.random()-0.5)*0.5;
-this.vy=(Math.random()-0.5)*0.5;
-}
-update(){
-this.x+=this.vx;
-this.y+=this.vy;
-if(this.x<0||this.x>canvas.width)this.vx*=-1;
-if(this.y<0||this.y>canvas.height)this.vy*=-1;
-}
-draw(){
-ctx.beginPath();
-ctx.arc(this.x,this.y,2,0,Math.PI*2);
-ctx.fillStyle="#3b82f6";
-ctx.fill();
-}
-}
-
-for(let i=0;i<70;i++){particles.push(new Particle());}
-
-function animate(){
-ctx.clearRect(0,0,canvas.width,canvas.height);
-particles.forEach(p=>{
-p.update();
-p.draw();
-});
-requestAnimationFrame(animate);
-}
-animate();
-</script>
-
+        // Efecto scroll en Navbar
+        window.onscroll = function() {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 100) {
+                nav.classList.add('shadow-2xl');
+            } else {
+                nav.classList.remove('shadow-2xl');
+            }
+        };
+    </script>
 </body>
 </html>
