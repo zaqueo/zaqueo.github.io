@@ -3,167 +3,234 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zaqueo Gómez Gómez | Emprendedor & Tecnólogo</title>
+    <title>Zaqueo Gómez Gómez | Emprendedor Tecnológico & Especialista en Redes</title>
     
-    <meta name="description" content="Portafolio de Zaqueo Gómez Gómez. Fundador de IXTANET y Purificadora Ixtatán. Especialista en redes, MikroTik y soluciones tecnológicas.">
+    <meta name="description" content="Sitio oficial de Zaqueo Gómez Gómez. Fundador de IXTANET y Purificadora Ixtatán. Experto en MikroTik, redes de fibra óptica y desarrollo Python.">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #0f172a; overflow-x: hidden; }
-        .glass { background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.05); }
-        #network-canvas { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; opacity: 0.5; }
-        .text-gradient { background: linear-gradient(to right, #38bdf8, #3b82f6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .card-hover:hover { transform: translateY(-10px); transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); border-color: #3b82f6; }
+        body { font-family: 'Inter', sans-serif; background-color: #020617; color: #f8fafc; overflow-x: hidden; }
+        .glass { background: rgba(15, 23, 42, 0.6); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.05); }
+        .glass-card { background: rgba(30, 41, 59, 0.4); border: 1px solid rgba(59, 130, 246, 0.1); transition: all 0.4s ease; }
+        .glass-card:hover { border-color: #3b82f6; background: rgba(30, 41, 59, 0.6); transform: translateY(-5px); }
+        #network-canvas { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; opacity: 0.4; }
+        .text-blue-gradient { background: linear-gradient(to right, #60a5fa, #2563eb); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .border-glow { border: 1px solid rgba(59, 130, 246, 0.3); box-shadow: 0 0 15px rgba(59, 130, 246, 0.1); }
     </style>
 </head>
-<body class="text-slate-200">
+<body>
 
     <canvas id="network-canvas"></canvas>
 
-    <nav class="fixed w-full z-50 py-4 px-6 border-b border-white/5 bg-slate-900/80 backdrop-blur-md">
+    <nav class="fixed w-full z-50 py-4 px-6 bg-slate-950/80 backdrop-blur-lg border-b border-white/5">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
-            <a href="#" class="text-2xl font-black tracking-tighter">ZG<span class="text-blue-500">.</span></a>
-            <div class="hidden md:flex space-x-8 text-xs font-bold uppercase tracking-widest">
+            <a href="#" class="text-2xl font-black tracking-tighter text-white italic">ZAQUEO<span class="text-blue-500">.</span></a>
+            <div class="hidden lg:flex space-x-8 text-xs font-bold uppercase tracking-widest text-slate-400">
                 <a href="#inicio" class="hover:text-blue-400 transition">Inicio</a>
-                <a href="#sobre-mi" class="hover:text-blue-400 transition">Sobre Mí</a>
-                <a href="#servicios" class="hover:text-blue-400 transition">Servicios</a>
-                <a href="#contacto" class="bg-blue-600 px-6 py-2 rounded-full hover:bg-blue-700 transition shadow-lg shadow-blue-900/20">Contacto</a>
+                <a href="#sobre-mi" class="hover:text-blue-400 transition">Perfil</a>
+                <a href="#experiencia" class="hover:text-blue-400 transition">Trayectoria</a>
+                <a href="#negocios" class="hover:text-blue-400 transition">Empresas</a>
+                <a href="#contacto" class="bg-blue-600 px-6 py-2 rounded-full text-white hover:bg-blue-700 transition shadow-lg shadow-blue-900/40">Contratar</a>
             </div>
         </div>
     </nav>
 
-    <header id="inicio" class="min-h-screen flex items-center justify-center text-center px-6 pt-20">
-        <div class="max-w-4xl">
+    <header id="inicio" class="min-h-screen flex items-center justify-center px-6 pt-20 relative">
+        <div class="text-center" data-aos="fade-up">
             <div class="relative inline-block mb-10">
                 <img src="https://github.com/zaqueo.png" alt="Zaqueo Gómez" 
-                     class="w-44 h-44 md:w-52 md:h-52 rounded-full border-4 border-blue-500 shadow-2xl object-cover mx-auto">
-                <div class="absolute inset-0 rounded-full border border-blue-400/30 animate-ping"></div>
+                     class="w-48 h-48 md:w-56 md:h-56 rounded-full border-4 border-blue-500 shadow-[0_0_50px_rgba(59,130,246,0.3)] object-cover mx-auto">
+                <div class="absolute -bottom-2 -right-2 bg-blue-600 px-4 py-1 rounded-full text-[10px] font-bold uppercase tracking-tighter">Disponible</div>
             </div>
-            <h1 class="text-6xl md:text-8xl font-black mb-6 tracking-tight text-white">Zaqueo Gómez</h1>
-            <p class="text-xl md:text-2xl font-light text-blue-400 mb-12">
-                Emprendedor Tecnológico | Redes e Internet | Gestión de Servicios
+            <h1 class="text-6xl md:text-9xl font-black mb-6 tracking-tight text-white leading-none">ZAQUEO GÓMEZ</h1>
+            <p class="text-xl md:text-3xl font-light text-slate-400 mb-12 max-w-3xl mx-auto">
+                Líder Tecnológico en <span class="text-blue-400 font-semibold">San Mateo Ixtatán</span>. Fundador de IXTANET e innovador en servicios esenciales.
             </p>
-            <div class="flex flex-wrap justify-center gap-4">
-                <a href="#sobre-mi" class="bg-blue-600 px-10 py-4 rounded-2xl font-bold hover:bg-blue-700 transition transform hover:scale-105 shadow-xl">Explorar Perfil</a>
-                <a href="#servicios" class="glass px-10 py-4 rounded-2xl font-bold hover:bg-white/10 transition">Ver Servicios</a>
+            <div class="flex flex-wrap justify-center gap-5">
+                <a href="#contacto" class="bg-blue-600 px-12 py-5 rounded-2xl font-black hover:bg-blue-700 transition transform hover:scale-105 shadow-2xl">INICIAR PROYECTO</a>
+                <a href="#negocios" class="glass px-12 py-5 rounded-2xl font-black hover:bg-white/10 transition border border-white/10">MIS EMPRESAS</a>
             </div>
         </div>
     </header>
 
+    <section class="py-10 px-6">
+        <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="glass p-6 rounded-3xl text-center border-glow" data-aos="fade-up" data-aos-delay="100">
+                <span class="block text-4xl font-black text-white">5+</span>
+                <span class="text-xs text-blue-400 uppercase font-bold tracking-widest">Años Experiencia</span>
+            </div>
+            <div class="glass p-6 rounded-3xl text-center border-glow" data-aos="fade-up" data-aos-delay="200">
+                <span class="block text-4xl font-black text-white">2</span>
+                <span class="text-xs text-blue-400 uppercase font-bold tracking-widest">Empresas Líderes</span>
+            </div>
+            <div class="glass p-6 rounded-3xl text-center border-glow" data-aos="fade-up" data-aos-delay="300">
+                <span class="block text-4xl font-black text-white">100%</span>
+                <span class="text-xs text-blue-400 uppercase font-bold tracking-widest">Garantía Calidad</span>
+            </div>
+            <div class="glass p-6 rounded-3xl text-center border-glow" data-aos="fade-up" data-aos-delay="400">
+                <span class="block text-4xl font-black text-white">Guat</span>
+                <span class="text-xs text-blue-400 uppercase font-bold tracking-widest">Ubicación Local</span>
+            </div>
+        </div>
+    </section>
+
     <section id="sobre-mi" class="py-32 px-6">
-        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
-            <div class="space-y-8">
-                <div>
-                    <h2 class="text-blue-500 font-black uppercase tracking-[0.2em] text-sm mb-4">Mi Trayectoria</h2>
-                    <h3 class="text-4xl md:text-5xl font-extrabold text-white leading-tight">Conectando comunidades, proveyendo calidad.</h3>
-                </div>
-                <div class="text-lg text-slate-400 leading-relaxed space-y-6">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-center">
+            <div data-aos="fade-right">
+                <h2 class="text-blue-500 font-black uppercase tracking-[0.3em] text-sm mb-6 underline decoration-2 underline-offset-8">Mi Filosofía</h2>
+                <h3 class="text-5xl font-extrabold text-white mb-8 leading-tight">Tecnología con propósito humano.</h3>
+                <div class="text-xl text-slate-400 leading-relaxed space-y-6">
                     <p>
-                        Como fundador de <strong class="text-white">IXTANET</strong>, me especializo en el despliegue de infraestructura de internet y televisión digital, manejando tecnologías de vanguardia como fibra óptica y MikroTik.
+                        Soy un emprendedor multidisciplinario que cree en el poder de la conectividad para transformar regiones. Mi trabajo no solo se trata de configurar routers, sino de <strong class="text-white">crear puentes digitales</strong> para que mi comunidad en Huehuetenango prospere.
                     </p>
                     <p>
-                        A la par de la tecnología, gestiono <strong class="text-white font-bold italic">Purificadora Ixtatán</strong> en San Mateo Ixtatán, garantizando el suministro de agua purificada de alta calidad y gas propano para las familias de la región.
+                        Con <strong class="text-white">IXTANET</strong>, he revolucionado el acceso a la información mediante infraestructuras de fibra óptica. Con <strong class="text-blue-400">Purificadora Ixtatán</strong>, aseguro que el bienestar físico (agua y gas) llegue a cada hogar con la misma eficiencia con la que viajan los datos.
                     </p>
-                </div>
-                <div class="flex gap-4">
-                    <div class="glass p-4 rounded-2xl text-center flex-1">
-                        <span class="block text-2xl font-bold text-blue-400">ISP</span>
-                        <span class="text-xs text-slate-500 uppercase">Redes</span>
-                    </div>
-                    <div class="glass p-4 rounded-2xl text-center flex-1">
-                        <span class="block text-2xl font-bold text-blue-400">H2O</span>
-                        <span class="text-xs text-slate-500 uppercase">Servicios</span>
-                    </div>
-                    <div class="glass p-4 rounded-2xl text-center flex-1">
-                        <span class="block text-2xl font-bold text-blue-400">PY</span>
-                        <span class="text-xs text-slate-500 uppercase">Dev</span>
-                    </div>
                 </div>
             </div>
-
-            <div id="servicios" class="grid grid-cols-1 gap-6">
-                <div class="glass p-8 rounded-3xl card-hover border-l-4 border-blue-500">
-                    <div class="flex items-start gap-6">
-                        <div class="w-12 h-12 bg-blue-600/20 rounded-xl flex items-center justify-center text-blue-500 shrink-0">
-                            <i class="fas fa-broadcast-tower text-xl"></i>
-                        </div>
-                        <div>
-                            <h4 class="text-xl font-bold text-white mb-2">IXTANET - Telecomunicaciones</h4>
-                            <p class="text-sm text-slate-400">Gestión de redes ISP, configuración de MikroTik/Ubiquiti y soporte técnico avanzado.</p>
-                        </div>
-                    </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6" data-aos="fade-left">
+                <div class="glass-card p-8 rounded-3xl">
+                    <i class="fas fa-network-wired text-3xl text-blue-500 mb-4"></i>
+                    <h4 class="text-xl font-bold mb-2">Networking Pro</h4>
+                    <p class="text-sm text-slate-400 leading-relaxed">Configuración avanzada de OLTs, segmentación de redes VLAN y optimización de RouterOS.</p>
                 </div>
-
-                <div class="glass p-8 rounded-3xl card-hover border-l-4 border-cyan-400">
-                    <div class="flex items-start gap-6">
-                        <div class="w-12 h-12 bg-cyan-600/20 rounded-xl flex items-center justify-center text-cyan-400 shrink-0">
-                            <i class="fas fa-faucet-drip text-xl"></i>
-                        </div>
-                        <div>
-                            <h4 class="text-xl font-bold text-white mb-2">Purificadora Ixtatán</h4>
-                            <p class="text-sm text-slate-400">Suministro de agua purificada certificada y distribución autorizada de gas propano.</p>
-                        </div>
-                    </div>
+                <div class="glass-card p-8 rounded-3xl">
+                    <i class="fab fa-python text-3xl text-yellow-500 mb-4"></i>
+                    <h4 class="text-xl font-bold mb-2">Desarrollo Backend</h4>
+                    <p class="text-sm text-slate-400 leading-relaxed">Automatización de tareas críticas mediante scripts en Python y frameworks web como Flask.</p>
                 </div>
-
-                <div class="glass p-8 rounded-3xl card-hover border-l-4 border-indigo-500">
-                    <div class="flex items-start gap-6">
-                        <div class="w-12 h-12 bg-indigo-600/20 rounded-xl flex items-center justify-center text-indigo-400 shrink-0">
-                            <i class="fab fa-python text-xl"></i>
-                        </div>
-                        <div>
-                            <h4 class="text-xl font-bold text-white mb-2">Desarrollo & Automatización</h4>
-                            <p class="text-sm text-slate-400">Creación de Web Apps con Python/Flask para la gestión inteligente de clientes y redes.</p>
-                        </div>
-                    </div>
+                <div class="glass-card p-8 rounded-3xl">
+                    <i class="fas fa-industry text-3xl text-cyan-400 mb-4"></i>
+                    <h4 class="text-xl font-bold mb-2">Gestión Operativa</h4>
+                    <p class="text-sm text-slate-400 leading-relaxed">Administración total de suministros, logística de distribución y control de calidad industrial.</p>
+                </div>
+                <div class="glass-card p-8 rounded-3xl">
+                    <i class="fas fa-shield-halved text-3xl text-green-500 mb-4"></i>
+                    <h4 class="text-xl font-bold mb-2">Seguridad Digital</h4>
+                    <p class="text-sm text-slate-400 leading-relaxed">Implementación de Firewalls, VPNs seguras y sistemas de monitoreo 24/7 (NMS).</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contacto" class="py-32 px-6 bg-slate-900/50">
+    <section id="experiencia" class="py-32 px-6 bg-slate-900/30">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-center text-4xl font-black mb-20 text-white">Hitos de mi Carrera</h2>
+            <div class="space-y-12">
+                <div class="relative pl-10 border-l-2 border-blue-600" data-aos="fade-up">
+                    <div class="absolute -left-[9px] top-0 w-4 h-4 bg-blue-600 rounded-full shadow-[0_0_15px_rgba(37,99,235,0.8)]"></div>
+                    <span class="text-blue-500 font-bold text-sm">ACTUALIDAD</span>
+                    <h4 class="text-2xl font-bold text-white mt-1">Expansión de Red de Fibra Óptica</h4>
+                    <p class="text-slate-400 mt-2">Llevando el servicio de IXTANET a nuevos niveles mediante el despliegue de infraestructura OLT avanzada y televisión digital HD.</p>
+                </div>
+                <div class="relative pl-10 border-l-2 border-slate-700" data-aos="fade-up" data-aos-delay="100">
+                    <div class="absolute -left-[9px] top-0 w-4 h-4 bg-slate-700 rounded-full"></div>
+                    <span class="text-slate-500 font-bold text-sm">CONSOLIDACIÓN</span>
+                    <h4 class="text-2xl font-bold text-white mt-1">Fundación de Purificadora Ixtatán</h4>
+                    <p class="text-slate-400 mt-2">Diversificación hacia servicios de consumo esencial, estableciendo una planta de purificación y distribución de gas propano líder en la zona.</p>
+                </div>
+                <div class="relative pl-10 border-l-2 border-slate-700" data-aos="fade-up" data-aos-delay="200">
+                    <div class="absolute -left-[9px] top-0 w-4 h-4 bg-slate-700 rounded-full"></div>
+                    <span class="text-slate-500 font-bold text-sm">INICIOS</span>
+                    <h4 class="text-2xl font-bold text-white mt-1">Especialización en Automatización</h4>
+                    <p class="text-slate-400 mt-2">Desarrollo de las primeras herramientas en Python para la gestión de clientes MikroTik, reduciendo tiempos operativos en un 70%.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="negocios" class="py-32 px-6">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-5xl font-black text-center mb-20 text-white">Ecosistema de Negocios</h2>
+            <div class="grid lg:grid-cols-2 gap-10">
+                <div class="glass p-12 rounded-[3rem] border-glow relative overflow-hidden group" data-aos="zoom-in">
+                    <div class="absolute top-0 right-0 p-10 opacity-10 group-hover:scale-110 transition duration-500">
+                        <i class="fas fa-wifi text-9xl"></i>
+                    </div>
+                    <h3 class="text-4xl font-black text-blue-500 mb-6 tracking-tighter italic">IXTANET</h3>
+                    <p class="text-xl text-white font-bold mb-4">Telecomunicaciones de Próxima Generación</p>
+                    <ul class="text-slate-400 space-y-4 mb-10 text-lg">
+                        <li><i class="fas fa-check text-blue-600 mr-3"></i> Internet por Fibra Óptica (FTTH).</li>
+                        <li><i class="fas fa-check text-blue-600 mr-3"></i> Televisión Digital Local de alta calidad.</li>
+                        <li><i class="fas fa-check text-blue-600 mr-3"></i> Enlaces Inalámbricos punto a punto.</li>
+                        <li><i class="fas fa-check text-blue-600 mr-3"></i> Soporte ISP profesional 24/7.</li>
+                    </ul>
+                    <a href="#" class="inline-block bg-white text-slate-950 px-8 py-3 rounded-xl font-bold hover:bg-blue-500 hover:text-white transition">CONOCER MÁS</a>
+                </div>
+
+                <div class="glass p-12 rounded-[3rem] border-glow relative overflow-hidden group" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="absolute top-0 right-0 p-10 opacity-10 group-hover:scale-110 transition duration-500">
+                        <i class="fas fa-tint text-9xl text-cyan-500"></i>
+                    </div>
+                    <h3 class="text-4xl font-black text-cyan-400 mb-6 tracking-tighter italic uppercase">Purificadora Ixtatán</h3>
+                    <p class="text-xl text-white font-bold mb-4">Vitalidad y Energía para tu Hogar</p>
+                    <ul class="text-slate-400 space-y-4 mb-10 text-lg">
+                        <li><i class="fas fa-check text-cyan-400 mr-3"></i> Purificación de agua bajo normas de salud.</li>
+                        <li><i class="fas fa-check text-cyan-400 mr-3"></i> Venta de agua en garrafón y bolsas.</li>
+                        <li><i class="fas fa-check text-cyan-400 mr-3"></i> Distribuidor autorizado de Gas Propano.</li>
+                        <li><i class="fas fa-check text-cyan-400 mr-3"></i> Servicio a domicilio eficiente.</li>
+                    </ul>
+                    <a href="#" class="inline-block bg-cyan-500 text-white px-8 py-3 rounded-xl font-bold hover:bg-cyan-600 transition shadow-lg shadow-cyan-900/20">SOLICITAR SERVICIO</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 px-6 bg-slate-950/50">
+        <div class="max-w-6xl mx-auto flex flex-wrap justify-center gap-10 md:gap-20 opacity-50 grayscale hover:grayscale-0 transition duration-500">
+            <i class="fab fa-python text-6xl" title="Python"></i>
+            <i class="fas fa-server text-6xl" title="MikroTik"></i>
+            <i class="fab fa-ubuntu text-6xl" title="Ubuntu Server"></i>
+            <i class="fas fa-network-wired text-6xl" title="Networking"></i>
+            <i class="fab fa-html5 text-6xl" title="HTML5"></i>
+            <i class="fab fa-flask text-6xl" title="Flask"></i>
+        </div>
+    </section>
+
+    <section id="contacto" class="py-32 px-6">
         <div class="max-w-4xl mx-auto text-center">
-            <h2 class="text-blue-500 font-bold uppercase tracking-widest text-sm mb-6">Contacto</h2>
-            <h3 class="text-4xl font-extrabold mb-12 text-white">¿Hablamos sobre tu próximo proyecto?</h3>
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
-                <a href="mailto:tu-correo@ejemplo.com" class="glass p-10 rounded-3xl hover:border-blue-500 transition-all group">
-                    <i class="fas fa-envelope text-4xl mb-6 group-hover:scale-110 transition"></i>
-                    <p class="font-bold">Email</p>
-                </a>
-                <a href="https://wa.me/50278810881" target="_blank" class="glass p-10 rounded-3xl hover:border-green-500 transition-all group">
-                    <i class="fab fa-whatsapp text-4xl mb-6 text-green-500 group-hover:scale-110 transition"></i>
-                    <p class="font-bold">WhatsApp</p>
-                </a>
-                <a href="https://github.com/zaqueo" target="_blank" class="glass p-10 rounded-3xl hover:border-white transition-all group">
-                    <i class="fab fa-github text-4xl mb-6 group-hover:scale-110 transition"></i>
-                    <p class="font-bold">GitHub</p>
-                </a>
+            <div class="glass p-16 rounded-[4rem] border-glow" data-aos="zoom-in">
+                <h2 class="text-5xl font-black mb-8">¿Listo para colaborar?</h2>
+                <p class="text-xl text-slate-400 mb-12">Ya sea para una consultoría de redes o para servicios locales, estoy aquí para ayudarte.</p>
+                <div class="flex flex-col md:flex-row justify-center gap-6">
+                    <a href="https://wa.me/50278810881" class="flex items-center justify-center gap-4 bg-green-600 px-10 py-5 rounded-2xl font-bold text-xl hover:bg-green-700 transition">
+                        <i class="fab fa-whatsapp"></i> WhatsApp Directo
+                    </a>
+                    <a href="mailto:tu-correo@ejemplo.com" class="flex items-center justify-center gap-4 bg-white text-slate-900 px-10 py-5 rounded-2xl font-bold text-xl hover:bg-slate-200 transition">
+                        <i class="fas fa-envelope"></i> Enviar Email
+                    </a>
+                </div>
+                <div class="mt-12 flex justify-center space-x-8 text-2xl text-slate-500">
+                    <a href="https://github.com/zaqueo" class="hover:text-white transition"><i class="fab fa-github"></i></a>
+                    <a href="#" class="hover:text-blue-400 transition"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="hover:text-blue-400 transition"><i class="fab fa-facebook"></i></a>
+                </div>
             </div>
         </div>
     </section>
 
-    <footer class="py-16 text-center border-t border-white/5 bg-slate-950">
-        <div class="text-white font-black text-2xl mb-4">ZAQUEO<span class="text-blue-600">.</span></div>
-        <p class="text-slate-500 text-sm">© 2026 Zaqueo Gómez Gómez — San Mateo Ixtatán, Huehuetenango</p>
+    <footer class="py-12 text-center border-t border-white/5 bg-slate-950">
+        <p class="text-slate-500 text-sm font-bold uppercase tracking-widest">© 2026 Zaqueo Gómez Gómez — Guatemala</p>
+        <p class="text-slate-600 text-xs mt-2 italic">Ingeniería, Innovación y Calidad desde San Mateo Ixtatán</p>
     </footer>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
+        AOS.init({ duration: 1000, once: true });
+
         const canvas = document.getElementById('network-canvas');
         const ctx = canvas.getContext('2d');
         let particles = [];
-        let mouse = { x: null, y: null, radius: 150 };
+        let mouse = { x: null, y: null, radius: 100 };
 
-        window.addEventListener('mousemove', (e) => {
-            mouse.x = e.x;
-            mouse.y = e.y;
-        });
+        window.addEventListener('mousemove', (e) => { mouse.x = e.x; mouse.y = e.y; });
 
-        function resize() {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-        }
+        function resize() { canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
         window.addEventListener('resize', resize);
         resize();
 
@@ -171,26 +238,14 @@
             constructor() {
                 this.x = Math.random() * canvas.width;
                 this.y = Math.random() * canvas.height;
-                this.vx = (Math.random() - 0.5) * 0.5;
-                this.vy = (Math.random() - 0.5) * 0.5;
-                this.size = 2;
+                this.vx = (Math.random() - 0.5) * 0.4;
+                this.vy = (Math.random() - 0.5) * 0.4;
+                this.size = 1.5;
             }
             update() {
-                this.x += this.vx;
-                this.y += this.vy;
+                this.x += this.vx; this.y += this.vy;
                 if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
                 if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
-                
-                // Interacción con mouse
-                let dx = mouse.x - this.x;
-                let dy = mouse.y - this.y;
-                let distance = Math.sqrt(dx*dx + dy*dy);
-                if (distance < mouse.radius) {
-                    if (mouse.x < this.x && this.x < canvas.width - this.size * 10) this.x += 2;
-                    if (mouse.x > this.x && this.x > this.size * 10) this.x -= 2;
-                    if (mouse.y < this.y && this.y < canvas.height - this.size * 10) this.y += 2;
-                    if (mouse.y > this.y && this.y > this.size * 10) this.y -= 2;
-                }
             }
             draw() {
                 ctx.beginPath();
@@ -202,10 +257,8 @@
 
         function init() {
             particles = [];
-            let numberOfParticles = (canvas.height * canvas.width) / 9000;
-            for (let i = 0; i < numberOfParticles; i++) {
-                particles.push(new Particle());
-            }
+            let density = (canvas.width * canvas.height) / 7000;
+            for (let i = 0; i < density; i++) { particles.push(new Particle()); }
         }
 
         function connect() {
@@ -213,12 +266,10 @@
                 for (let b = a; b < particles.length; b++) {
                     let dx = particles[a].x - particles[b].x;
                     let dy = particles[a].y - particles[b].y;
-                    let distance = Math.sqrt(dx*dx + dy*dy);
-
-                    if (distance < 150) {
-                        let opacity = 1 - (distance/150);
-                        ctx.strokeStyle = `rgba(59, 130, 246, ${opacity})`;
-                        ctx.lineWidth = 1;
+                    let dist = Math.sqrt(dx*dx + dy*dy);
+                    if (dist < 180) {
+                        ctx.strokeStyle = `rgba(59, 130, 246, ${1 - dist/180})`;
+                        ctx.lineWidth = 0.5;
                         ctx.beginPath();
                         ctx.moveTo(particles[a].x, particles[a].y);
                         ctx.lineTo(particles[b].x, particles[b].y);
@@ -230,10 +281,7 @@
 
         function animate() {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
-            for (let i = 0; i < particles.length; i++) {
-                particles[i].update();
-                particles[i].draw();
-            }
+            particles.forEach(p => { p.update(); p.draw(); });
             connect();
             requestAnimationFrame(animate);
         }
