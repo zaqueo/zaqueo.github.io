@@ -1,3 +1,13 @@
+// Correo ofuscado — los bots no pueden leerlo en el HTML
+(function() {
+    var u = 'zaqueo';
+    var d = 'io.gt';
+    var link = document.getElementById('email-link');
+    if (link) {
+        link.href = 'mailto:' + u + '@' + d;
+    }
+})();
+
 // Inicializar animaciones AOS
 AOS.init({
     duration: 1000,
